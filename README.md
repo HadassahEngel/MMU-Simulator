@@ -1,11 +1,20 @@
-# MMU-Simulator
+# mmu-simulator
 
-Memory management unit implemented in Java
+system that simulates the memory management unit of the computer,
 
-In this project, Built a system to manage a memory unit. The task of the memory unit, is to identify if a requested page is not in the RAM. In case the page is not there, the MMU will get it from the hard drive.
+that can use different paging algorithms (MFU/Random/LRU). The project is written in JAVA.
 
-Simulate RAM (client), Hard disc(server) and MMU work when page-fault or page-replacement accure
+### The project has two parts
 
-When you first initialize the unit, you choose a replacement algorithm for the MMU (implemented with Java-Generics).
+1. server side (simulates the MMU)-its in charge of getting request form the client and according to the request puts/gets/update the pages in the RAM.
 
-This project uses Client-Server, OOP (Java), Multi-threaded, GUI (Swing).
+2. client side (simulates the OS)- send the server a request of which pages to puts/gets/update and gets a response back.
+
+### Run the project:
+Open the client and server side each in a different window
+#### Run the server side:
+*	go to the com.hit.mby.server and run CacheUnitDriver.
+* typing start in the command line.
+#### Run the client side:
+* go to the com.hit.mby.driver and run CacheUnitClientDriver
+* now you can send requests using the GUI.
